@@ -23,6 +23,23 @@ class User(AbstractUser):
         blank=True,
         max_length=255,
     )
+    email = models.EmailField(
+        max_length=254,
+        null=True,
+        blank=True,
+    )
+    phone = models.CharField(
+        max_length=256,
+        null=True,
+        blank=True,
+    )
+    review = models.OneToOneField(
+        "review.Review",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="user_review",
+    )
 
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"username": self.username})
