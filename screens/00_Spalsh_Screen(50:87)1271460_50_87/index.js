@@ -80,7 +80,7 @@ export class Blank extends React.Component {
 
 const styles = StyleSheet.create({
   ScrollView_1: { backgroundColor: "rgba(245, 243, 230, 1)" },
-  View_2: { height: hp("123%") },
+  View_2: { height: hp('123%') },
   View_50_88: {
     width: wp("91%"),
     minWidth: wp("91%"),
